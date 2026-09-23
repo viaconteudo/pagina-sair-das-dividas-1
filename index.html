@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viva Sempre com Dinheiro - Saia das Dívidas e Conquiste Estabilidade Financeira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #5B3DF5;
+            --color-primary-dark: #4527C2;
+            --color-accent: #5B3DF5;
+            --color-bg: #FFFFFF;
+            --color-surface: #F5F3FE;
+            --color-text: #191233;
+            --color-text-muted: #574F78;
+            --radius: 16px;
+            --shadow-sm: 0 2px 8px rgba(91, 61, 245, 0.08);
+            --shadow-md: 0 4px 24px rgba(91, 61, 245, 0.12);
+            --font-display: 'Sora', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--color-text);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg) 100%);
+            padding: 3rem 0 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(91, 61, 245, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2rem;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subheadline {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            color: var(--color-text-muted);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-authority {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            margin-bottom: 2.5rem;
+            font-style: italic;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 3rem auto 2.5rem;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.125rem 2.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-family: var(--font-body);
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--color-accent);
+            color: white;
+            box-shadow: 0 4px 16px rgba(91, 61, 245, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-dark);
+            box-shadow: 0 6px 24px rgba(91, 61, 245, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-surface);
+        }
+
+        @media (max-width: 640px) {
+            .cta-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        .pain-section {
+            background: var(--color-bg);
+        }
+
+        .pain-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .pain-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .pain-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--color-surface);
+            padding: 1.5rem;
+            border-radius: 12px;
+            font-size: 1.125rem;
+            color: var(--color-text);
+        }
+
+        .pain-item::before {
+            content: '❌';
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .for-whom-section {
+            background: var(--color-surface);
+        }
+
+        .for-whom-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .for-whom-card {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .for-whom-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .for-whom-card.is-for h3 {
+            color: var(--color-primary);
+        }
+
+        .for-whom-card.not-for h3 {
+            color: var(--color-text-muted);
+        }
+
+        .for-whom-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .for-whom-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 1rem;
+            color: var(--color-text-muted);
+        }
+
+        .for-whom-list li::before {
+            flex-shrink: 0;
+            font-size: 1.25rem;
+        }
+
+        .is-for .for-whom-list li::before {
+            content: '✓';
+            color: var(--color-primary);
+        }
+
+        .not-for .for-whom-list li::before {
+            content: '✗';
+            color: var(--color-text-muted);
+        }
+
+        .benefits-section {
+            background: var(--color-bg);
+        }
+
+        .benefits-section .container {
+            text-align: center;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--color-surface);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .benefit-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--color-text);
+        }
+
+        .benefit-card p {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            margin: 0;
+        }
+
+        .stack-section {
+            background: var(--color-surface);
+        }
+
+        .stack-section .container {
+            text-align: center;
+        }
+
+        .stack-list {
+            max-width: 700px;
+            margin: 3rem auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .stack-item {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            text-align: left;
+        }
+
+        .stack-number {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            font-family: var(--font-display);
+        }
+
+        .stack-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .stack-content p {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            margin: 0;
+        }
+
+        .objections-section {
+            background: var(--color-bg);
+        }
+
+        .objections-section .container {
+            text-align: center;
+        }
+
+        .objections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .objection-card {
+            background: var(--color-surface);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            text-align: left;
+        }
+
+        .objection-card h3 {
+            font-size: 1.25rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .objection-card h3::before {
+            content: '💡';
+            font-size: 1.5rem;
+        }
+
+        .objection-card p {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            margin: 0;
+        }
+
+        .guarantee-section {
+            background: var(--color-surface);
+            text-align: center;
+        }
+
+        .guarantee-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--color-bg);
+            padding: 2rem 3rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            margin-top: 2rem;
+        }
+
+        .guarantee-badge-icon {
+            font-size: 3rem;
+        }
+
+        .guarantee-badge-text {
+            text-align: left;
+        }
+
+        .guarantee-badge-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+        }
+
+        .guarantee-badge-text p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .faq-section {
+            background: var(--color-bg);
+        }
+
+        .faq-section .container {
+            max-width: 800px;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+        }
+
+        .faq-list {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .faq-item {
+            background: var(--color-surface);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-item h3 {
+            font-size: 1.25rem;
+            color: var(--color-text);
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-item p {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            margin: 0;
+        }
+
+        .final-cta-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta-section h2 {
+            color: white;
+        }
+
+        .final-cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+        }
+
+        .price-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: var(--radius);
+            max-width: 500px;
+            margin: 2rem auto;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .price-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .price-value {
+            font-size: 3rem;
+            font-weight: 800;
+            font-family: var(--font-display);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-installments {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0;
+        }
+
+        .final-cta-section .btn-primary {
+            background: white;
+            color: var(--color-primary);
+            margin-top: 1.5rem;
+        }
+
+        .final-cta-section .btn-primary:hover {
+            background: var(--color-surface);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .microcopy {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 1rem;
+        }
+
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-top: 2px solid var(--color-surface);
+        }
+
+        .mobile-cta-bar .container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-width: 600px;
+        }
+
+        .mobile-cta-bar .btn {
+            width: 100%;
+            padding: 1rem 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-cta-bar {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 140px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .guarantee-badge {
+                flex-direction: column;
+                padding: 2rem;
+                text-align: center;
+            }
+
+            .guarantee-badge-text {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Saia das Dívidas e Conquiste a Liberdade Financeira que Você Sempre Sonhou</h1>
+                <p class="hero-subheadline">Mentoria completa e acessível que vai te ensinar o caminho estruturado para limpar seu nome, organizar suas finanças e viver com tranquilidade</p>
+                <p class="hero-authority">Método validado e estruturado, com acesso vitalício às aulas gravadas</p>
+
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/a9VqYUsbX5w" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="cta-group">
+                    <a href="https://go.hotmart.com/A107724075C?dp=1" class="btn btn-primary" data-track="cta-principal">Quero Começar Agora</a>
+                    <a href="https://go.hotmart.com/A107724075C" class="btn btn-secondary" data-track="cta-secundario">Quero conhecer mais o produto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pain-section">
+        <div class="container">
+            <div class="pain-content">
+                <h2>Você Está Cansado de Viver Assim?</h2>
+                <div class="pain-list">
+                    <div class="pain-item">Seu nome está sujo e você não consegue fazer nada: sem cartão, sem crédito, sem oportunidades</div>
+                    <div class="pain-item">As dívidas só crescem e você não sabe por onde começar a resolver</div>
+                    <div class="pain-item">Vive com aquele aperto constante no peito sempre que pensa em dinheiro</div>
+                    <div class="pain-item">Já tentou organizar sozinho, mas a informação na internet é fragmentada e confusa</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="for-whom-section">
+        <div class="container">
+            <h2>Esta Mentoria É Pra Você?</h2>
+            <div class="for-whom-grid">
+                <div class="for-whom-card is-for">
+                    <h3><span>✓</span> Esta mentoria É pra você se:</h3>
+                    <ul class="for-whom-list">
+                        <li>Você está endividado e quer sair dessa situação de uma vez</li>
+                        <li>Quer aprender a negociar dívidas com descontos reais</li>
+                        <li>Precisa de um método estruturado, não de dicas soltas</li>
+                        <li>Quer conquistar estabilidade financeira e realizar sonhos</li>
+                        <li>Busca acesso vitalício a um conteúdo organizado</li>
+                    </ul>
+                </div>
+                <div class="for-whom-card not-for">
+                    <h3><span>✗</span> Esta mentoria NÃO é pra você se:</h3>
+                    <ul class="for-whom-list">
+                        <li>Você busca fórmulas mágicas sem esforço</li>
+                        <li>Quer resultados sem aplicar o método ensinado</li>
+                        <li>Não tem interesse em aprender sobre finanças pessoais</li>
+                        <li>Prefere continuar fazendo tudo sozinho sem orientação</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2>O Que Você Vai Conquistar</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="benefit-icon">🎯</span>
+                    <h3>Método Completo e Estruturado</h3>
+                    <p>Tudo organizado em um único lugar, sem precisar buscar informação fragmentada</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-icon">💳</span>
+                    <h3>Limpe Seu Nome com Estratégia</h3>
+                    <p>Aprenda a negociar dívidas com descontos de até 90% e conquiste seu nome limpo</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-icon">📚</span>
+                    <h3>Acesso Vitalício</h3>
+                    <p>Aulas gravadas disponíveis para sempre, assista quando e quantas vezes quiser</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-icon">💰</span>
+                    <h3>Organização Financeira Real</h3>
+                    <p>Conquiste controle sobre seu dinheiro e pare de viver no sufoco</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-icon">🔒</span>
+                    <h3>Estabilidade e Tranquilidade</h3>
+                    <p>Viva sem aquele aperto no peito toda vez que pensa em contas</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-icon">✨</span>
+                    <h3>Realize Seus Sonhos</h3>
+                    <p>Com finanças organizadas, você finalmente pode planejar e conquistar o que sempre quis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stack-section">
+        <div class="container">
+            <h2>O Que Está Incluso na Mentoria</h2>
+            <div class="stack-list">
+                <div class="stack-item">
+                    <div class="stack-number">1</div>
+                    <div class="stack-content">
+                        <h3>Módulo Completo sobre Negociação de Dívidas</h3>
+                        <p>Aprenda o passo a passo para negociar com descontos reais e limpar seu nome sem cair em armadilhas</p>
+                    </div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-number">2</div>
+                    <div class="stack-content">
+                        <h3>Conhecendo a Nova Lei do Nome Limpo</h3>
+                        <p>Entenda como funciona a legislação que pode te ajudar e se você se enquadra nos benefícios</p>
+                    </div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-number">3</div>
+                    <div class="stack-content">
+                        <h3>Estratégias de Organização Financeira</h3>
+                        <p>Método completo para organizar suas contas, criar um orçamento realista e nunca mais viver no caos</p>
+                    </div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-number">4</div>
+                    <div class="stack-content">
+                        <h3>Como Usar Cartão de Crédito a Seu Favor</h3>
+                        <p>Transforme o cartão de crédito de vilão em aliado e evite cair na armadilha dos juros</p>
+                    </div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-number">5</div>
+                    <div class="stack-content">
+                        <h3>Planejamento para Conquistar Estabilidade</h3>
+                        <p>Aprenda a criar um plano realista para viver com tranquilidade e realizar seus sonhos</p>
+                    </div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-number">6</div>
+                    <div class="stack-content">
+                        <h3>Acesso Vitalício às Aulas Gravadas</h3>
+                        <p>Todas as aulas disponíveis para sempre, para você rever sempre que precisar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="objections-section">
+        <div class="container">
+            <h2>Você Ainda Está em Dúvida?</h2>
+            <div class="objections-grid">
+                <div class="objection-card">
+                    <h3>"Não tenho tempo pra fazer mais um curso"</h3>
+                    <p>Esta mentoria tem aulas gravadas que você acessa quando quiser, no seu ritmo. Você não precisa de horas por dia — alguns minutos já fazem diferença. E o acesso é vitalício, então você nunca perde o conteúdo.</p>
+                </div>
+                <div class="objection-card">
+                    <h3>"Já tentei me organizar e não funcionou"</h3>
+                    <p>A diferença aqui é que você não vai buscar informação fragmentada sozinho. Você terá um método estruturado, validado, que já ajudou milhares de pessoas. É o caminho completo, do começo ao fim, sem você precisar adivinhar o próximo passo.</p>
+                </div>
+                <div class="objection-card">
+                    <h3>"Será que isso é pra mim?"</h3>
+                    <p>Se você está endividado, com o nome sujo, vivendo no sufoco financeiro e querendo mudar isso de verdade, esta mentoria é exatamente pra você. Foi criada pensando em quem está no caos e quer sair dele com orientação clara.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content">
+                <h2>Sua Compra É Totalmente Segura</h2>
+                <p>Esta mentoria é oferecida através da Hotmart, a maior plataforma de produtos digitais da América Latina. Você tem toda a segurança de uma compra protegida, com suporte dedicado e acesso imediato após a confirmação do pagamento.</p>
+                <div class="guarantee-badge">
+                    <span class="guarantee-badge-icon">🔒</span>
+                    <div class="guarantee-badge-text">
+                        <h3>Compra Protegida</h3>
+                        <p>Ambiente 100% seguro com certificado SSL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Como funciona o acesso à mentoria?</h3>
+                    <p>Assim que sua compra for confirmada, você receberá um e-mail com seus dados de acesso à plataforma. Lá você terá todas as aulas gravadas disponíveis para assistir quando quiser, quantas vezes precisar.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Por quanto tempo terei acesso ao conteúdo?</h3>
+                    <p>O acesso é vitalício. Você pode assistir as aulas hoje, daqui a um mês ou daqui a um ano. O conteúdo estará sempre disponível para você.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Posso parcelar o pagamento?</h3>
+                    <p>Sim! Você pode parcelar em até 12x de R$ 89,82 no cartão de crédito, ou pagar à vista por R$ 870,00 via boleto ou PIX.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>E se eu tiver dúvidas durante a mentoria?</h3>
+                    <p>Você terá acesso a um canal de suporte onde poderá tirar suas dúvidas sobre o conteúdo e sobre como aplicar o método na sua realidade.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Preciso de algum conhecimento prévio?</h3>
+                    <p>Não! A mentoria foi criada justamente para quem está começando do zero ou está no caos financeiro. Todo o conteúdo é explicado de forma clara e passo a passo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta-section">
+        <div class="container">
+            <h2>Está Pronto Para Mudar Sua Vida Financeira?</h2>
+            <p>Acabe com o sufoco, limpe seu nome e conquiste a estabilidade que você merece</p>
+            <div class="price-box">
+                <div class="price-label">Investimento</div>
+                <div class="price-value">R$ 870,00</div>
+                <p class="price-installments">ou 12x de R$ 89,82</p>
+            </div>
+            <a href="https://go.hotmart.com/A107724075C?dp=1" class="btn btn-primary" data-track="cta-principal">Sim, Quero Transformar Minhas Finanças</a>
+            <p class="microcopy">🔒 Acesso liberado imediatamente após a confirmação da compra</p>
+        </div>
+    </section>
+
+    <div class="mobile-cta-bar">
+        <div class="container">
+            <a href="https://go.hotmart.com/A107724075C?dp=1" class="btn btn-primary" data-track="cta-principal">Quero Começar Agora</a>
+            <a href="https://go.hotmart.com/A107724075C" class="btn btn-secondary" data-track="cta-secundario">Conhecer mais o produto</a>
+        </div>
+    </div>
+</body>
+</html>
